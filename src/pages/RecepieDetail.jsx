@@ -4,7 +4,7 @@ import useFetch from "../hooks/useFetch";
 
 function RecepieDetail() {
   const location = useLocation().pathname;
-  const url = "http://localhost:3000/recipes" + location;
+  const url = "https://glow-spring-elf.glitch.me/recipes" + location;
   const { data, isPending, error } = useFetch(url);
 
   return (

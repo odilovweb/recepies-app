@@ -3,7 +3,9 @@ import useFetch from "../hooks/useFetch";
 import { Link } from "react-router-dom";
 
 function Home() {
-  const { data, isPending, error } = useFetch("http://localhost:3000/recipes");
+  const { data, isPending, error } = useFetch(
+    "https://glow-spring-elf.glitch.me/recipes"
+  );
 
   return (
     <div className="align-element">
