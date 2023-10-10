@@ -12,10 +12,13 @@ function Home() {
       {isPending && <h2 className="textl-3xl font-bold">Loading</h2>}
       {error && <h2 className="textl-3xl font-bold">{error}</h2>}
       {data && (
-        <ul className="flex py-20 gap-10">
+        <ul className="py-20 grid grid-cols-3 gap-3">
           {data.map((item) => {
             return (
-              <li key={item.id} className="card w-96 bg-base-100 shadow-xl">
+              <li
+                key={item.id}
+                className="card w-96 bg-base-100 shadow-xl max-w-[310px]"
+              >
                 <figure>
                   <img srcSet={item.img} alt="Recepie Image" />
                 </figure>
