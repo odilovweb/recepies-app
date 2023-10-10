@@ -9,10 +9,14 @@ function Home() {
 
   return (
     <div className="align-element">
-      {isPending && <h2 className="textl-3xl font-bold">Loading</h2>}
-      {error && <h2 className="textl-3xl font-bold">{error}</h2>}
+      {isPending && (
+        <h2 className="text-3xl font-bold text-center my-5">Loading</h2>
+      )}
+      {error && (
+        <h2 className="text-3xl font-bold text-center my-5">{error}</h2>
+      )}
       {data && (
-        <ul className="py-20 grid grid-cols-3 gap-3">
+        <ul className="py-20 grid grid-cols-3 gap-x-3 gap-y-10">
           {data.map((item) => {
             return (
               <li

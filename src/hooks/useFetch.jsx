@@ -1,10 +1,12 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import { useState } from "react";
 
 function useFetch(url, method = "GET") {
   const [data, setData] = useState(null);
-  const [isPending, setIsPending] = useState(false);
   const [error, setError] = useState(null);
+  const [isPending, setIsPending] = useState(false);
   const [postData, setPostData] = useState(null);
+
   const newData = (newRecipe) => {
     setPostData({
       method: "POST",
@@ -31,13 +33,15 @@ function useFetch(url, method = "GET") {
         setIsPending(false);
       }
     };
-    if (method === "GET") {
-      fetchData();
-    } else if (method === "POST" && postData) {
+    if (method === "POST" && postData) {
       fetchData(postData);
     }
-  }, [url, method, postData]);
-  return { data, isPending, error, newData };
+    if (method == "GET") {
+      fetchData();
+    }
+  }, [url, method]);
+
+  return { error, data, isPending, newData };
 }
 
 export default useFetch;

@@ -10,7 +10,7 @@ function RecepieDetail() {
   return (
     <>
       <div className="align-element py-15">
-        <h1 className="text-center text-3xl font-bold">Recepie Detail</h1>
+        <h1 className="text-center text-3xl font-bold my-4">Recepie Detail</h1>
         <hr />
         {isPending && (
           <h3 className="text-3xl font-bold text-center">Loading...</h3>
@@ -19,7 +19,7 @@ function RecepieDetail() {
         {data && (
           <div className="flex justify-between py-10">
             <img
-              className="w-[450px] h-[350px] shadow-current"
+              className="w-[450px] h-[350px] shadow-current r"
               srcSet={data.img}
               alt="Recepie Meal Image"
             />
