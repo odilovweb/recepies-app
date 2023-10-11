@@ -39,7 +39,7 @@ function useFetch(url, method = "GET") {
     if (method == "GET") {
       fetchData();
     }
-  }, [url, method]);
+  }, [url, method, postData]);
 
   return { error, data, isPending, newData };
 }

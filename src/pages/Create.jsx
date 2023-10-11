@@ -1,10 +1,7 @@
 import { useState } from "react";
 import { v4 as uuid } from "uuid";
 import useFetch from "../hooks/useFetch";
-// const titleInp = document.getElementById("title-input");
-// const methodInp = document.getElementById("method-input");
-// const time = document.getElementById("time-input");
-// const imageInp = document.getElementById("image-input");
+import { toast } from "react-toastify";
 
 function Create() {
   const [title, setTitle] = useState("");
@@ -40,6 +37,7 @@ function Create() {
       ingredients,
       id: uuid(),
     });
+    toast.success("New Recipe add succesfuly 👍");
     setTitle("");
     setCookingTime(0);
     setMethod("");
