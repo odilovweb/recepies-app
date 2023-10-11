@@ -16,12 +16,12 @@ function Home() {
         <h2 className="text-3xl font-bold text-center my-5">{error}</h2>
       )}
       {data && (
-        <ul className="py-20 grid grid-cols-3 gap-x-3 gap-y-10">
+        <ul className="py-20 grid grid-cols-3 gap-x-3 gap-y-10 max-[975px]:grid-cols-2 max-[665px]:grid-cols-1 ">
           {data.map((item) => {
             return (
               <li
                 key={item.id}
-                className="card w-96 bg-base-100 shadow-xl max-w-[310px]"
+                className="card w-96 bg-base-100 shadow-xl max-w-[310px] max-[665px]: mx-auto"
               >
                 <figure>
                   <img srcSet={item.img} alt="Recepie Image" />

@@ -17,7 +17,7 @@ function RecepieDetail() {
         )}
         {error && <h3 className="text-3xl font-bold text-center">{error}</h3>}
         {data && (
-          <div className="flex justify-between py-10">
+          <div className="flex justify-between py-1 pt-8 max-[1000px]:flex-col items-center ">
             <img
               className="w-[450px] h-[350px] shadow-current r"
               srcSet={data.img}
